@@ -19,7 +19,7 @@ int main(){
 	 * "warning: initialization from incompatible pointer type"
 	 * => try without the &
 	 * XXX UNLIKE arr and &arr[0], &arr is not an int pointer (type: int*) (hence the warning):
-	 * it is an array pointer (type: int(*)[3]) XXX */
+	 * it is a "length-3-array pointer" (type: int(*)[3]) XXX */
 
 	/* TWO DIFFERENT TYPES, BUT THEY HAVE THE SAME VALUE!! */
 	printf("\nSUMMARY: arr: %p, &arr[0]: %p, &arr: %p\n", arr, &arr[0], &arr);
@@ -29,10 +29,13 @@ int main(){
 	 * a pointer on the entire array (not only the first value): */
 	int(* arr_ptr)[] = &arr; // it works also with [3]
 	printf("\nDEREFERENCED ARRAY POINTER WITH INDEX: %d\n", (*arr_ptr)[1]); // value at the index i
-	printf("DEREFERENCED ARRAY POINTER (WITHOUT INDEX): %p\n", *arr_ptr); // first value pointer
+	printf("DEREFERENCED ARRAY POINTER (WITHOUT INDEX): %p\n", *arr_ptr); // first value pointer (type: int*)
 	printf("DEREFERENCED x2 ARRAY: %d\n", **arr_ptr); // first value
 
-	printf("ENTIRE ARRAY POINTER?? %p\n", arr_ptr); // NO!! ;-)
+	printf("ENTIRE ARRAY POINTER?? %p\n", arr_ptr); // NO!! ;-) first value pointer (type: int(*)[3])
+	/* No equivalent of Python typeof(), but you can test the type this way: */
+	//int(* tab)[] = *arr_ptr;
+
 	printf("NOTE: POINTER TO POINTER: %p\n", &arr_ptr);
 
 

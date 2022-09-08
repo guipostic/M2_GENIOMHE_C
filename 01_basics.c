@@ -2,7 +2,7 @@
 #include <stdio.h> // printf
 #include <stdbool.h>
 #include "foo_test.h"
-#define SIZE 4
+#define SIZE 4 // SIZE is a "macro"
 
 typedef unsigned long int ulint;
 

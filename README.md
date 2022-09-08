@@ -2,10 +2,12 @@
 CM et TD de programmation C pour le Master 2 GENIOMHE
 
 ## Summary
-This course will teach you the basics of the C programming language.
-The source code provided here is compliant with the C11 standard. Its compilation has been tested with the GNU C Compiler (gcc) 7.5.0, on Ubuntu 18.05 operating system.  
+This course will teach you the basics of the C programming language.  
+The source code provided here is compliant with the C11 standard.  
+Its compilation has been tested with the GNU C Compiler (gcc) 7.5.0, on Ubuntu 18.05 operating system.  
   
-**As an exercise**, you will implement a singly linked list (https://en.wikipedia.org/wiki/Linked_list), with functions to add or remove nodes, and to print the list. This will require the following concepts:
+**As an exercise**, you will implement a singly [linked list](https://en.wikipedia.org/wiki/Linked_list), with functions to add or remove nodes, and to print the list.  
+This will require knowledge of:
 * functions
 * loops
 * C struct

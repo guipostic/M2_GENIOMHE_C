@@ -186,10 +186,6 @@ int main(){
 	 * https://benhoyt.com/writings/hash-table-in-c/
 	 */
 
-
-	// MAKE FILE
-	// MACROS
-
         return 0;
 }
 

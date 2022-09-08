@@ -1,3 +1,15 @@
+/*******************************************************************************
+*
+* Program: Read And Store All Lines Of A File Into An Array Of Strings
+* 
+* Description: Example of reading and storing all the lines of a file into an 
+* array of strings in C.
+*
+* YouTube Lesson: https://www.youtube.com/watch?v=X-1qodkHCHo 
+*
+* Author: Kevin Browne @ https://portfoliocourses.com
+*
+*******************************************************************************/
 #include <stdio.h>
 
 // constants for maximum number of lines in the file and max length of a line

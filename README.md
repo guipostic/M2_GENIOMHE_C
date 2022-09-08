@@ -12,7 +12,7 @@ This will require knowledge of:
 * loops
 * C struct
 * pointers
-* dynamic memory allocation (malloc, free)
+* dynamic memory allocation ([malloc, free](https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/))
 
 Optionally, additional functions can be implemented (e.g. to reverse or sort the linked list), as well as other types of linked lists (e.g. circular or doubly linked lists).  
 

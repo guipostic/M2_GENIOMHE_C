@@ -5,6 +5,11 @@
 #define SIZE 4 // SIZE is a "macro"
 
 typedef unsigned long int ulint;
+/* NOTE:
+ * Maximum value for a variable of type int:                       2,147,483,647
+ * Maximum value for a variable of type unsigned int:              4,294,967,295
+ * Maximum value for a variable of type long long int: 9,223,372,036,854,775,807 (= 2^63-1; maximum number of positive values for a signed 64-bit integer)
+*/
 
 
 ////////////////
@@ -47,9 +52,13 @@ void andOneMutability(int* ptr_inputvalue);
 // MAIN //
 //////////
 int main(){
+/* NOTE: the main() function is called by the operating system */
         printf("PRINT00\n");
 	/* Print format */
-	printf("PRINT01: %10d\n", 12345); // will print _____12345 (5 spaces before 12345)
+	printf("PRINT01A: %10d\n", 12345); // will print _____12345 (5 spaces before 12345)
+
+	float foobar = 0.9375;
+	printf("PRINT01B:%.2f\n", foobar);    // prints out 0.94
 
 	/* puts(), fputs() */
 	puts("PRINT02");

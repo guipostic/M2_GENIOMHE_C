@@ -16,3 +16,5 @@ int main(){
 
 	return 0;
 }
+
+/* Note: https://www.geeksforgeeks.org/difference-between-malloc-and-calloc-with-examples/ */

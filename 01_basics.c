@@ -67,14 +67,14 @@ int main(){
 	int foo = 1, bar = 2, baz = foo; // Declare and define multiple variables in one line
 	float qux = 2.3, fred = 4.5; // They need to be of the same type
 
-	int sum = 21, count = 3;
+	int sum = 22, count = 3;
 
 	float mean1;
 	mean1 = sum / count;
 	printf("PRINT04: Value of mean FLOAT : %f\n", mean1 );
 	int mean2;
 	mean2 = sum / count;
-	printf("PRINT05: Value of mean INT : %d\n", mean2 ); // test with %f => Warning
+	printf("PRINT05: Value of mean INT : %d -------- %.12f\n", mean2, mean1 ); // test with %f => Warning
 
 	/* Conversion or "type casting" */
 	double mean;
@@ -88,12 +88,12 @@ int main(){
 	 * - values of the same type
 	 *****************************/
 
-	//int my_arr[] = {9, 8, 7, 6};
-        //my_arr[3000] = 5; // Undefined Behavior
+	int my_arrx[] = {9, 8, 7, 6};
+        my_arrx[30] = 5; // Undefined Behavior (= nothing to interpret)
 
         //size_t n = sizeof(my_arr)/sizeof(my_arr[0]); // site_t or (unsigned) int; %ld and %d, respectively
 	/* NOTE: no typeof() equivalent */
-        int lol[SIZE] = {9, 8, 7, 6};
+        int lol[SIZE] = {9, 8};
         lol[3] = 10;
         
         int my_arr[] = {9, 8, 7, 6};
@@ -140,13 +140,13 @@ int main(){
 	/***************
 	 * 4. Pointers *
 	 * *************/
-	printf("PRINT11: %p\n", &test1);
+	printf("PRINT11: %p ....... %p\n", &test1, &test2);
 
 	int* ptr_test1 = &test1;
-	//printf("PRINT12: %p\n", ptr_test1);
-	printf("PRINT12: %p\n", (void*)ptr_test1);
+	printf("PRINT12: %p\n", ptr_test1);
 	/* Note: to have behavior defined by the C standard when printing a pointer, you should convert it to (void*) */
 
+	// DEREFERENCING
 	printf("PRINT13: BEFORE = %d\n", test1);
 	(*ptr_test1)++;
 	// versus: *ptr_test1++; // operator precedence rules
@@ -184,10 +184,11 @@ int main(){
 
 	Item flower;
 
-	/* Pointers on structures */
+	/* Pointers to structures */
 	Enemy* struct_pointer = &boss1;
 	printf("PRINT21: %d\n", boss1.strength);
-	printf("PRINT22: %d\n", struct_pointer->strength);
+	printf("PRINT22: %d\n", (&boss1)->strength);
+	//printf("PRINT22: %d\n", struct_pointer->strength);
 
 
 	/* There is no native hash tables in C (Python dictionaries, Java maps, etc.)

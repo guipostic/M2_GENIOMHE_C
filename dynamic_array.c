@@ -33,14 +33,14 @@ void free_arr(DynArray* da) {
 }
 
 int main(){
-	DynArray dynarr;
-	initialize_arr(&dynarr, 7); // initialization with 7 elements
+	DynArray* dynarr;
+	initialize_arr(dynarr, 7); // initialization with 7 elements
 	for (int i = 0; i < 1000; i++)
-		insert_arr(&dynarr, i);
+		insert_arr(dynarr, i);
 
-	printf("%d\n", dynarr.array[12]); // print 13th element
-	printf("%d\n", dynarr.used); // print number of elements
-	free_arr(&dynarr);
+	printf("%d\n", dynarr->array[12]); // print 13th element
+	printf("%d\n", dynarr->used); // print number of elements
+	free_arr(dynarr);
 
 	return 0;
 }

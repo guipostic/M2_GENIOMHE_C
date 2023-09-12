@@ -13,9 +13,10 @@ typedef unsigned long int ulint;
 
 
 ////////////////
-// STRUCTURE //
+// STRUCTURES //
 ////////////////
 
+```
 typedef struct enemy Enemy; // Alias to type "Enemy" instead of "struct enemy"
 struct enemy{
 	/* Structure "members": */
@@ -24,6 +25,7 @@ struct enemy{
 	int strength;
 	/* Structures are data types so no values */
 }; // XXX
+```
 
 typedef struct level Level;
 struct level{

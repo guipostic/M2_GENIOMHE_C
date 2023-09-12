@@ -13,7 +13,7 @@ typedef unsigned long int ulint;
 
 
 ////////////////
-// STRUCTURES //
+// STRUCTURE //
 ////////////////
 
 typedef struct enemy Enemy; // Alias to type "Enemy" instead of "struct enemy"

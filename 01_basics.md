@@ -252,3 +252,69 @@ if (statement1 && statement2){
         }
 ```
 
+
+
+# Functions
+Below are the key components of functions in C:
+
+1. **Function Prototype**:
+   - A function prototype is a declaration of a function that provides information about its name, return type, and parameters. It serves as a blueprint for the function.
+   - The function prototype typically appears before the `main` function in your C program, or you can place it in a header file (.h) and include that file in your source code.
+
+   ```c
+   // Function prototype
+   return_type function_name(parameter_type parameter_name);
+   ```
+
+   Example:
+   ```c
+   int add(int a, int b); // Function prototype for an "add" function
+   ```
+
+2. **Function Definition**:
+   - The function definition is the actual implementation of the function. It contains the code that gets executed when the function is called.
+   - The function definition includes the return type, function name, parameters, and the function body enclosed in curly braces `{ }`.
+
+   ```c
+   return_type function_name(parameter_type parameter_name) {
+       // Function body
+       // Code to perform the function's task
+       return result; // Return statement (if applicable)
+   }
+   ```
+
+   Example:
+   ```c
+   int add(int a, int b) {
+       int sum = a + b;
+       return sum;
+   }
+   ```
+
+3. **Function Call**:
+   - To execute a function, you call it by its name and provide the necessary arguments (values) that match the function's parameters.
+   - The result of the function call can be stored in a variable or used in an expression.
+
+   ```c
+   int result = add(5, 3); // Calling the "add" function
+   ```
+
+4. **Return Statement**:
+   - A function can optionally include a `return` statement to return a value to the caller. The return type in the function prototype must match the type of the value being returned.
+   - If a function doesn't return a value, its return type is specified as `void`.
+
+   ```c
+   return_type function_name(parameter_type parameter_name) {
+       // Function body
+       // Code to perform the function's task
+       return result; // Return statement (if applicable)
+   }
+   ```
+
+   Example:
+   ```c
+   void printMessage() {
+       printf("Hello, world!\n");
+       // No return statement in this void function
+   }
+   ```

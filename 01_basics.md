@@ -14,6 +14,12 @@ Some of the fundamental data types in C are:
 
 6. **void**: Represents an empty data type. It is commonly used as the return type for functions that do not return any value. It is also used with pointers to indicate that the pointer does not have a specific data type associated with it.
 
+7. **typedef**: Allows you to create aliases or custom names for existing data types. For example, you can use `typedef` to create a new name for an `int` or `struct` type.
+
+Example:
+```C
+typedef unsigned long int ulint;
+```
 
 ## Strongly 🆚 weakly typed languages
 

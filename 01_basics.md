@@ -513,7 +513,9 @@ PRINT22: 9000
 PRINT23: 9000
 ```
 
-
+### Hash tables
+In C, there is no native hash tables (e.g. dictionaries in Python, maps in Java).
+They have to be [implemented using struct](https://benhoyt.com/writings/hash-table-in-c/).
 
 
 

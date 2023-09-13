@@ -255,7 +255,7 @@ Below are the key components of functions in C:
 
    Example:
    ```c
-   int add(int a, int b); // Function prototype for an "add" function
+   int andOne(int inputvalue);
    ```
 
 2. **Function Definition**:
@@ -271,40 +271,33 @@ Below are the key components of functions in C:
    ```
 
    Example:
-   ```c
-   int add(int a, int b) {
-       int sum = a + b;
-       return sum;
-   }
-   ```
+    ```c
+    int andOne(int inputvalue){
+        int outputvalue = inputvalue + 1;
+        return outputvalue;
+    }
+    ```
 
 3. **Function Call**:
    - To execute a function, you call it by its name and provide the necessary arguments (values) that match the function's parameters.
    - The result of the function call can be stored in a variable or used in an expression.
 
+    Example:
    ```c
-   int result = add(5, 3); // Calling the "add" function
+    int test1 = 10;
+    int test2 = andOne(test1);
+    printf("PRINT10: %d -> %d\n", test1, test2);
    ```
+    Output:
+    ```
+    PRINT10: 10 -> 11
+    ```
 
 4. **Return Statement**:
    - A function can optionally include a `return` statement to return a value to the caller. The return type in the function prototype must match the type of the value being returned.
    - If a function doesn't return a value, its return type is specified as `void`.
 
-   ```c
-   return_type function_name(parameter_type parameter_name) {
-       // Function body
-       // Code to perform the function's task
-       return result; // Return statement (if applicable)
-   }
-   ```
 
-   Example:
-   ```c
-   void printMessage() {
-       printf("Hello, world!\n");
-       // No return statement in this void function
-   }
-   ```
 
 # Pointers
 Pointers allow you to work memory addresses directly, enabling low-level memory manipulation and advanced data structures.

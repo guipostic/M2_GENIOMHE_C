@@ -238,20 +238,6 @@ if (statement1 && statement2){
 # Functions
 Below are the key components of functions in C:
 
-### Function prototype
-   - A function prototype is a declaration of a function that provides information about its name, return type, and parameters. It serves as a blueprint for the function.
-   - The function prototype typically appears before the `main` function in your C program, or you can place it in a header file (.h) and include that file in your source code.
-
-   ```c
-   // Function prototype
-   return_type function_name(parameter_type parameter_name);
-   ```
-
-   Example:
-   ```c
-   int andOne(int inputvalue);
-   ```
-
 ### Function definition
    - The function definition is the actual implementation of the function. It contains the code that gets executed when the function is called.
    - The function definition includes the return type, function name, parameters, and the function body enclosed in curly braces `{ }`.
@@ -291,6 +277,19 @@ Below are the key components of functions in C:
    - A function can optionally include a `return` statement to return a value to the caller. The return type in the function prototype must match the type of the value being returned.
    - If a function doesn't return a value, its return type is specified as `void`.
 
+### Function prototype
+   - A function prototype is a declaration of a function that provides information about its name, return type, and parameters. It serves as a blueprint for the function.
+   - The function prototype typically appears before the `main` function in your C program, or you can place it in a header file (.h) and include that file in your source code.
+
+   ```c
+   // Function prototype
+   return_type function_name(parameter_type parameter_name);
+   ```
+
+   Example:
+   ```c
+   int andOne(int inputvalue);
+   ```
 
 
 # Pointers

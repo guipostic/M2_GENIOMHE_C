@@ -124,7 +124,7 @@ Other functions can be used for outputting strings to a file or to the standard 
        return 0;
    }
    ```
-`fputs` also allows redirection to the standard error:
+`fputs` also allows redirection to the [standard error](https://en.wikipedia.org/wiki/Standard_streams#Standard_error_(stderr)):
 ```C
 fputs("PRINT03\n", stderr);
 ```

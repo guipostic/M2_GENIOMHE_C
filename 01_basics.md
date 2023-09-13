@@ -242,23 +242,24 @@ Below are the key components of functions in C:
    - The function definition is the actual implementation of the function. It contains the code that gets executed when the function is called.
    - The function definition includes the return type, function name, parameters, and the function body enclosed in curly braces `{ }`.
 
-
-    ```C
-    return_type function_name(parameter_type parameter_name) {
+```C
+return_type function_name(parameter_type parameter_name) {
     // Function body
     // Code to perform the function's task
     return result; // Return statement (if applicable)
-    }
-    ```
+}
+```
+
+
 
 Example:
 
-    ```c
-    int andOne(int inputvalue){
-        int outputvalue = inputvalue + 1;
-        return outputvalue;
-    }
-    ```
+```c
+int andOne(int inputvalue){
+    int outputvalue = inputvalue + 1;
+    return outputvalue;
+}
+```
 
 ### Function call
    - To execute a function, you call it by its name and provide the necessary arguments (values) that match the function's parameters.

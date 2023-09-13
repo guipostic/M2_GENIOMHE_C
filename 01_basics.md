@@ -163,7 +163,7 @@ int test[2][3][4] = {
 };
 ````
 
-## Iteration through a C array
+### Iteration through an array
 
 1. **For Loop**: A `for` loop is a commonly used construct for iterating over arrays. You can use a `for` loop to specify the start and end index of the array and step through each element.
 
@@ -206,7 +206,7 @@ if (statement1 && statement2){
 # Functions
 Below are the key components of functions in C:
 
-### Function prototype:
+### Function prototype
    - A function prototype is a declaration of a function that provides information about its name, return type, and parameters. It serves as a blueprint for the function.
    - The function prototype typically appears before the `main` function in your C program, or you can place it in a header file (.h) and include that file in your source code.
 
@@ -220,7 +220,7 @@ Below are the key components of functions in C:
    int andOne(int inputvalue);
    ```
 
-### Function definition:
+### Function definition
    - The function definition is the actual implementation of the function. It contains the code that gets executed when the function is called.
    - The function definition includes the return type, function name, parameters, and the function body enclosed in curly braces `{ }`.
 
@@ -240,7 +240,7 @@ Below are the key components of functions in C:
     }
     ```
 
-### Function call:
+### Function call
    - To execute a function, you call it by its name and provide the necessary arguments (values) that match the function's parameters.
    - The result of the function call can be stored in a variable or used in an expression.
 
@@ -255,7 +255,7 @@ Below are the key components of functions in C:
     PRINT10: 10 -> 11
     ```
 
-### Return statement:
+### Return statement
    - A function can optionally include a `return` statement to return a value to the caller. The return type in the function prototype must match the type of the value being returned.
    - If a function doesn't return a value, its return type is specified as `void`.
 
@@ -273,7 +273,7 @@ Output:
 PRINT11: 0x7ffe48f19fc8 ....... 0x7ffe48f19fcc
 ```
 
-### Definition, declaration and initialization:
+### Definition, declaration and initialization
    - A pointer is a variable that stores the memory address of another variable.
    - Pointers are declared using an asterisk (*) symbol followed by the data type they point to.
    - Pointers must be initialized with the address of a valid variable before they can be used. Uninitialized pointers may lead to undefined behavior.
@@ -290,7 +290,7 @@ PRINT11: 0x7ffe48f19fc8 ....... 0x7ffe48f19fcc
    PRINT12: 0x7ffe48f19fc8
    ```
 
-### Dereferencing:
+### Dereferencing
    - To access the value pointed to by a pointer, you use the dereference operator (`*`).
 
     Example:
@@ -308,7 +308,7 @@ PRINT11: 0x7ffe48f19fc8 ....... 0x7ffe48f19fcc
    ```
 
 
-### Passing pointers to functions:
+### Passing pointers to functions
    - Pointers are frequently used to pass data by reference to functions, allowing functions to modify the original data.
 
 Example:

@@ -161,3 +161,45 @@ PRINT06: Value of mean FLOAT CAST: 7.333333
 `return` is a keyword in C used to specify the return value of a function.
 In this case, it's used in the `main` function to indicate that the program has executed without any errors and is returning an exit status of 0.
 In C and many other programming languages, a return value of 0 typically indicates success, while a non-zero value can be used to indicate different error conditions.
+
+
+# Arrays
+Arrays are an essential data structure in the C programming language. They allow to store multiple values of the same data type in a contiguous block of memory.
+
+## Fixed Size
+C arrays have a fixed size, which means you need to specify the number of elements they can hold when you declare them. Once the size is defined, it cannot be changed during runtime.
+
+## Data Type
+All elements in a C array must be of the same data type. You cannot mix different data types within a single array.
+
+
+## Declaration and Initialization
+Arrays can be declared and initialized in various ways:
+   ```c
+   int numbers[5]; // Declaration of an integer array of size 5
+   int primes[] = {2, 3, 5, 7, 11}; // Declaration and initialization of an integer array
+   ```
+
+
+## Bounds Checking
+C does not perform bounds checking by default, which means you can access elements outside the bounds of an array. This can lead to [undefined behavior](https://en.wikipedia.org/wiki/Undefined_behavior) or memory corruption if not done carefully.
+
+```C
+int my_arr1[] = {9, 8, 7, 6};
+my_arr1[30] = 5; // Undefined Behavior (= nothing to interpret)
+```
+
+
+## Sizeof Operator
+You can use the `sizeof` operator to determine the size (in bytes) of an array or its elements. For example:
+   ```c
+   int size = sizeof(numbers); // Size of the 'numbers' array in bytes
+   ```
+
+## Multidimensional Arrays
+C supports multidimensional arrays, which are essentially arrays of arrays. Common examples include 2D arrays and matrices.
+
+   ```c
+   int matrix[3][3]; // Declaration of a 2D array (3x3 matrix)
+   ```
+

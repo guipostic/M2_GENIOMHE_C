@@ -276,8 +276,10 @@ Below are the key components of functions in C:
 
 # Pointers
 Pointers allow to work memory addresses directly, enabling low-level memory manipulation and advanced data structures.
+A pointer is a variable that stores the memory address of another variable.
 
 Example:
+
 ```C
 printf("PRINT11: %p ....... %p\n", &test1, &test2);
 ```
@@ -286,19 +288,20 @@ Output:
 PRINT11: 0x7ffe48f19fc8 ....... 0x7ffe48f19fcc
 ```
 
-### Definition, declaration and initialization
-   - A pointer is a variable that stores the memory address of another variable.
+### Declaration and initialization
    - Pointers are declared using an asterisk (*) symbol followed by the data type they point to.
    - Pointers must be initialized with the address of a valid variable before they can be used. Uninitialized pointers may lead to undefined behavior.
 
-    Example:
+Example:
+    
    ```c
    int* ptr_test1 = &test1;
    printf("PRINT12: %p\n", ptr_test1);
    ```
    💡 To have behavior defined by the C standard when printing a pointer, you should convert it to `(void*)`
 
-   Output:
+Output:
+
    ```
    PRINT12: 0x7ffe48f19fc8
    ```
@@ -306,7 +309,8 @@ PRINT11: 0x7ffe48f19fc8 ....... 0x7ffe48f19fcc
 ### Dereferencing
    - To access the value pointed to by a pointer, you use the dereference operator (`*`).
 
-    Example:
+Example:
+
    ```c
    printf("PRINT13: BEFORE = %d\n", test1);
    (*ptr_test1)++;
@@ -314,7 +318,8 @@ PRINT11: 0x7ffe48f19fc8 ....... 0x7ffe48f19fcc
    ```
    🆚 `*ptr_test1++;`: operator precedence rules
 
-   Output:
+Output:
+
    ```
    PRINT13: BEFORE = 10
    PRINT14: AFTER = 11
@@ -489,45 +494,6 @@ PRINT22: 9000
 PRINT23: 9000
 ```
 
-
-# puts and fputs
-Other functions can be used for outputting strings to a file or to the standard output (usually the console).
-
-1. **puts**:
-   - `puts` is primarily used for writing strings to the standard output (stdout).
-   - It takes a single argument, which is a null-terminated string (a C-style string).
-   - After writing the string to the standard output, it automatically appends a newline character (`\n`) to the end of the string, so it effectively adds a line break after the output.
-
-   ```c
-   #include <stdio.h>
-
-   int main() {
-       puts("Hello, world!"); // Output: Hello, world!
-       return 0;
-   }
-   ```
-
-2. **fputs**:
-   - `fputs` is used for writing strings to a specified file stream.
-   - It takes two arguments: the string you want to write and the file stream to which you want to write the string.
-   - Unlike `puts`, `fputs` does not automatically add a newline character to the end of the string, so you need to include it in the string if you want a line break.
-
-   ```c
-   #include <stdio.h>
-
-   int main() {
-       FILE *file = fopen("output.txt", "w"); // Open a file for writing
-       if (file != NULL) {
-           fputs("Hello, world!", file); // Write to the file without a newline
-           fclose(file); // Close the file
-       }
-       return 0;
-   }
-   ```
-`fputs` also allows redirection to the [standard error](https://en.wikipedia.org/wiki/Standard_streams#Standard_error_(stderr)):
-```C
-fputs("PRINT03\n", stderr);
-```
 
 
 

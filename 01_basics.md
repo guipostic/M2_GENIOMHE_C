@@ -541,6 +541,94 @@ In C, there is no native hash tables (e.g. dictionaries in Python, maps in Java)
 They have to be [implemented using struct](https://benhoyt.com/writings/hash-table-in-c/).
 
 
+# Array pointers
+```c
+int arr[3] = {11, 12, 13};
+printf("PRINT arr: %d, %p\n", arr, arr);
+```
+```
+PRINT arr: -1305537268, 0x7ffeb22f150c
+```
+The arr variable is actually a pointer on the first value.
+
+```c
+int* first_val_ptr = &arr[0]; // You can test with &arr[1] and &arr[2]
+printf("FIRST VALUE POINTER (&arr[0]): %p\n", first_val_ptr);
+printf("SAME BUT DEREFERENCED: %d\n", *first_val_ptr);
+```
+```
+FIRST VALUE POINTER (&arr[0]): 0x7ffeb22f150c
+SAME BUT DEREFERENCED: 11
+```
+
+### What's wrong with the two lines below?
+```c
+int* entire_arr_ptr = &arr;
+printf("TEST &arr: %p\n", entire_arr_ptr);
+```
+```
+warning: initialization from incompatible pointer type
+TEST &arr: 0x7ffeb22f150c
+```
+Try also without the `&`...  
+Unlike `arr` and `&arr[0]`, `&arr` is not an `int` pointer (type: `int*`) (hence the warning): it is a "length-3-array pointer" (type: `int(*)[3]`)
 
 
+Two different types but they have the same value!!
+```c
+printf("\nSUMMARY: arr: %p, &arr[0]: %p, &arr: %p\n", arr, &arr[0], &arr);
+```
+```
+SUMMARY: arr: 0x7ffeb22f150c, &arr[0]: 0x7ffeb22f150c, &arr: 0x7ffeb22f150c
+```
 
+Now, this is the correct way to declare a pointer on the entire array (not only the first value):
+```c
+int(* arr_ptr)[] = &arr; // it works also with [3]
+printf("\nDEREFERENCED ARRAY POINTER WITH INDEX: %d\n", (*arr_ptr)[1]); // value at the index i
+printf("DEREFERENCED ARRAY POINTER (WITHOUT INDEX): %p\n", *arr_ptr); // first value pointer (type: int*)
+printf("DEREFERENCED x2 ARRAY: %d\n", **arr_ptr); // first value
+```
+```
+DEREFERENCED ARRAY POINTER WITH INDEX: 12
+DEREFERENCED ARRAY POINTER (WITHOUT INDEX): 0x7ffeb22f150c
+DEREFERENCED x2 ARRAY: 11
+
+```
+```c
+printf("ENTIRE ARRAY POINTER?? %p\n", arr_ptr); // NO!! ;-) first value pointer (type: int(*)[3])
+```
+```
+ENTIRE ARRAY POINTER?? 0x7ffeb22f150c
+```
+
+No equivalent of Python typeof(), but you can test the type this way:
+```c
+int(* tab)[] = *arr_ptr;
+```
+as this will generate an "incompatible pointer type" warning.
+
+```c
+printf("NOTE: POINTER TO POINTER: %p\n", &arr_ptr);
+```
+```
+NOTE: POINTER TO POINTER: 0x7ffeb22f14f0
+```
+
+Consequence: pass array to function.
+Functions actually take pointers to arrays:
+```c
+printf("\nARRAY BEFORE: %d\n", arr[1]);
+modifyArray(arr);
+printf("ARRAY AFTER: %d\n", arr[1]);
+```
+```
+ARRAY BEFORE: 12
+ARRAY AFTER: 999
+```
+In Python, the list would have been copied within the function block, and only the copy would have been modified.
+
+To copy array (including string):
+```c
+memcpy(array2, array1, sizeof(array2)) // #include <string.h>
+```

@@ -1,3 +1,51 @@
+# Data types
+C provides several basic data types that you can use to define variables and perform operations on data.  
+Here are some of the fundamental data types in C:
+
+1. **int**: Represents integers, which are whole numbers. The size of an `int` can vary depending on the system, but it is usually 4 bytes on most modern systems.
+
+2. **float**: Represents single-precision floating-point numbers, which are used for real numbers with a fractional part. Typically, a `float` is a 32-bit data type.
+
+3. **double**: Represents double-precision floating-point numbers, which provide greater precision than `float`. A `double` is usually a 64-bit data type.
+
+4. **char**: Represents individual characters. It's typically 1 byte in size.
+
+5. **_Bool**: Represents boolean values, which can have one of two possible values: `0` for false or `1` for true. This data type is introduced in C99 and is often used in conditional expressions.
+
+6. **void**: Represents an empty data type. It is commonly used as the return type for functions that do not return any value. It is also used with pointers to indicate that the pointer does not have a specific data type associated with it.
+
+7. **enum**: Represents user-defined enumerated types, which consist of a set of named integer constants.
+
+8. **typedef**: Allows you to create aliases or custom names for existing data types. For example, you can use `typedef` to create a new name for an `int` or `struct` type.
+
+9. **Arrays**: You can create arrays of any of the above data types to store multiple values of the same type in a contiguous block of memory.
+
+10. **Pointers**: Pointers are a fundamental concept in C. They allow you to store addresses of variables or data structures in memory.
+
+11. **Structures (struct)**: Allows you to create custom data types by combining multiple variables of different data types into a single unit.
+
+12. **Unions (union)**: Similar to structures, unions allow you to group different data types together, but they only occupy as much memory as the largest member.
+
+## "weakly typed"
+
+C is often described as a "weakly typed" or "loosely typed" language. This means that C allows for more implicit type conversions and flexibility in working with different data types compared to languages that are considered "strongly typed" (e.g. Ada, or Haskell).
+
+In a strongly typed language, strict type checking is enforced, and type conversions typically require explicit casting or conversion functions. C, on the other hand, allows you to perform operations on different types of data more liberally, and it will often perform implicit type conversions when necessary.
+
+Example:
+
+```C
+int a = 5;
+float b = 3.14;
+float result = a + b; // Implicit conversion of 'a' to float
+```
+
+Here, the integer `a` is implicitly converted to a float when added to the float `b`. Many strongly typed languages would require you to explicitly cast `a` to a float in this case.
+
+However, this flexibility in C can also lead to potential issues and bugs if not used carefully, as implicit type conversions can sometimes produce unexpected results.
+
+
+
 # Main function
 In C programming, it is necessary to have a `main` function.
 The `main` function serves as the entry point for a C program.

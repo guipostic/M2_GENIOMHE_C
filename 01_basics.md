@@ -80,12 +80,21 @@ int main() {
 }
 ```
 
-### Preprocessor directive
+### Preprocessor directives
 `#include` is a preprocessor directive in C.
 It is used to include the contents of a standard or user-defined header file in your C program.
 In this case, `<stdio.h>` is a standard header file that stands for "standard input-output header."
 It provides functions and definitions for input and output operations.
-By including `<stdio.h>`, you gain access to the `printf` function and other I/O related features.
+By including `<stdio.h>`, you gain access to the `printf` function and other I/O related features.  
+
+The `#define` preprocessor directive is used to create macros or symbolic constants.
+It allows you to define a name (the macro name) that represents a value, an expression, or a block of code.
+When the preprocessor encounters the macro name in your code, it replaces it with the defined value or code before the actual compilation of your program begins.
+
+Example:
+```C
+#define SIZE 4 // SIZE is a "macro"
+```
 
 
 ### Output display

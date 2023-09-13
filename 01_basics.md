@@ -349,7 +349,8 @@ PRINT11: 0x7ffe48f19fc8 ....... 0x7ffe48f19fcc
 ### Passing pointers to functions:
    - Pointers are frequently used to pass data by reference to functions, allowing functions to modify the original data.
 
-    Example:
+Example:
+    
    ```c
    void andOneMutability(int* ptr_inputvalue){
        (*ptr_inputvalue)++;
@@ -361,26 +362,46 @@ PRINT11: 0x7ffe48f19fc8 ....... 0x7ffe48f19fcc
        printf("PRINT15: %d\n", test3);
    }
    ```
-    Output:
+
+
+Output:
+
    ```
    PRINT15: 1001
    ```
 
 ### Defining a function pointer
 
-    Example:
-    ```C
-    int(*functionPointer)(int);
-    functionPointer = &andOne; // Note: NULL vs 0
+Example:
 
-    int result1 = (*functionPointer)(test3);
-    printf("PRINT16A: %d\n", result1);
+Header file `foo_test.h`:
 
-    int abc = 999999;
-    foo_function(&andOne, abc); // function from a header file: no prototype needed
-    double test_math = sqrt(9); // #include <math.h> is in the header file
-    ```
+```c
+#include <math.h>
 
-    ```
-    PRINT16A: 1002
-    ```
+int foo_function( int(*funcPtr)(int), int myvalue ){
+        /* This example function does nothing more than reusing another function */
+        int resulting_value = (*funcPtr)(myvalue);
+        printf("PRINT16B: %d\n", resulting_value);
+        return resulting_value;
+}
+```
+
+File `01_basics.c`:
+```c
+int(*functionPointer)(int);
+functionPointer = &andOne; // Note: NULL vs 0
+
+int result1 = (*functionPointer)(test3);
+printf("PRINT16A: %d\n", result1);
+int abc = 999999;
+foo_function(&andOne, abc); // function from a header file: no prototype needed
+double test_math = sqrt(9); // #include <math.h> is in the header file
+```
+
+Output:
+```
+PRINT16A: 1002
+PRINT16B: 1000000
+```
+

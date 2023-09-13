@@ -1,6 +1,6 @@
 # Data types
-C provides several basic data types that you can use to define variables and perform operations on data.  
-Here are some of the fundamental data types in C:
+C provides several basic data types that can be used to define variables and perform operations on data.  
+Some of the fundamental data types in C are:
 
 1. **int**: Represents integers, which are whole numbers. The size of an `int` can vary depending on the system, but it is usually 4 bytes on most modern systems.
 
@@ -13,19 +13,6 @@ Here are some of the fundamental data types in C:
 5. **_Bool**: Represents boolean values, which can have one of two possible values: `0` for false or `1` for true. This data type is introduced in C99 and is often used in conditional expressions.
 
 6. **void**: Represents an empty data type. It is commonly used as the return type for functions that do not return any value. It is also used with pointers to indicate that the pointer does not have a specific data type associated with it.
-
-7. **enum**: Represents user-defined enumerated types, which consist of a set of named integer constants.
-
-8. **typedef**: Allows you to create aliases or custom names for existing data types. For example, you can use `typedef` to create a new name for an `int` or `struct` type.
-
-9. **Arrays**: You can create arrays of any of the above data types to store multiple values of the same type in a contiguous block of memory.
-
-10. **Pointers**: Pointers are a fundamental concept in C. They allow you to store addresses of variables or data structures in memory.
-
-11. **Structures (struct)**: Allows you to create custom data types by combining multiple variables of different data types into a single unit.
-
-12. **Unions (union)**: Similar to structures, unions allow you to group different data types together, but they only occupy as much memory as the largest member.
-
 
 
 # Main function

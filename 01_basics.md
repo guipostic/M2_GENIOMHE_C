@@ -447,7 +447,7 @@ A structure is a composite data type that allows to group together variables of 
 
 #### Alternative syntax for aliases
 ```c
-typedef struct level Level;
+typedef struct level Level; // Alias to type "Level" instead of "struct level"
 struct level{
         int length;
         char name[100];

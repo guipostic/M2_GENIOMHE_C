@@ -26,24 +26,6 @@ Here are some of the fundamental data types in C:
 
 12. **Unions (union)**: Similar to structures, unions allow you to group different data types together, but they only occupy as much memory as the largest member.
 
-## "weakly typed"
-
-C is often described as a "weakly typed" or "loosely typed" language. This means that C allows for more implicit type conversions and flexibility in working with different data types compared to languages that are considered "strongly typed" (e.g. Ada, or Haskell).
-
-In a strongly typed language, strict type checking is enforced, and type conversions typically require explicit casting or conversion functions. C, on the other hand, allows you to perform operations on different types of data more liberally, and it will often perform implicit type conversions when necessary.
-
-Example:
-
-```C
-int a = 5;
-float b = 3.14;
-float result = a + b; // Implicit conversion of 'a' to float
-```
-
-Here, the integer `a` is implicitly converted to a float when added to the float `b`. Many strongly typed languages would require you to explicitly cast `a` to a float in this case.
-
-However, this flexibility in C can also lead to potential issues and bugs if not used carefully, as implicit type conversions can sometimes produce unexpected results.
-
 
 
 # Main function
@@ -129,7 +111,52 @@ Other functions can be used for outputting strings to a file or to the standard 
 fputs("PRINT03\n", stderr);
 ```
 
+# Strongly vs weakly typed languages
 
+C is often described as a "weakly typed" or "loosely typed" language. This means that C allows for more implicit type conversions and flexibility in working with different data types compared to languages that are considered "strongly typed" (e.g. Ada, or Haskell).
+
+In a strongly typed language, strict type checking is enforced, and type conversions typically require explicit casting or conversion functions. C, on the other hand, allows you to perform operations on different types of data more liberally, and it will often perform implicit type conversions when necessary.
+
+Example:
+
+```C
+int a = 5;
+float b = 3.14;
+float result = a + b; // Implicit conversion of 'a' to float
+```
+
+Here, the integer `a` is implicitly converted to a float when added to the float `b`. Many strongly typed languages would require you to explicitly cast `a` to a float in this case.
+
+However, this flexibility in C can also lead to potential issues and bugs if not used carefully, as implicit type conversions can sometimes produce unexpected results.
+
+## Conversion or "type casting"
+
+
+
+Example:
+```C
+int sum = 22, count = 3;
+float mean1;
+mean1 = sum / count;
+printf("PRINT04: Value of mean FLOAT : %f\n", mean1 );
+```
+Output:
+```
+PRINT04: Value of mean FLOAT : 7.000000
+```
+
+
+Example:
+```C
+int sum = 22, count = 3;
+double mean;
+mean = (double) sum / count;
+printf("PRINT06: Value of mean FLOAT CAST: %f\n", mean );
+```
+Output:
+```
+PRINT06: Value of mean FLOAT CAST: 7.333333
+```
 # Return statement
 `return` is a keyword in C used to specify the return value of a function.
 In this case, it's used in the `main` function to indicate that the program has executed without any errors and is returning an exit status of 0.

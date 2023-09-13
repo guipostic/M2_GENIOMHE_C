@@ -15,89 +15,6 @@ Some of the fundamental data types in C are:
 6. **void**: Represents an empty data type. It is commonly used as the return type for functions that do not return any value. It is also used with pointers to indicate that the pointer does not have a specific data type associated with it.
 
 
-# Main function
-In C programming, it is necessary to have a `main` function.
-The `main` function serves as the entry point for a C program.
-When you run a C program, the operating system starts executing code from the `main` function.
-Without a `main` function, the program would not have a starting point, and it would not be able to execute.
-
-```C
-#include <stdio.h>
-
-int main() {
-    printf("Hello, world!\n");
-    return 0;
-}
-```
-
-# Preprocessor directive
-`#include` is a preprocessor directive in C.
-It is used to include the contents of a standard or user-defined header file in your C program.
-In this case, `<stdio.h>` is a standard header file that stands for "standard input-output header."
-It provides functions and definitions for input and output operations.
-By including `<stdio.h>`, you gain access to the `printf` function and other I/O related features.
-
-# Output display
-`printf` (print format) is a standard C library function used for formatted output.
-It is responsible for displaying text or data on the console or other output devices.
-In this line, `printf` is used to print the string "Hello, world!" followed by a newline character (`\n`) to the standard output (usually the console).  
-Example:
-```C
-printf("PRINT01A: %10d\n", 12345);
-```
-Output:
-```
-PRINT01A:      12345
-```
-Example:
-```C
-float foobar = 0.9375;
-printf("PRINT01B:%.2f\n", foobar);
-```
-Output:
-```
-PRINT01B:0.94
-```
-
-## puts and fputs
-Other functions can be used for outputting strings to a file or to the standard output (usually the console).
-
-1. **puts**:
-   - `puts` is primarily used for writing strings to the standard output (stdout).
-   - It takes a single argument, which is a null-terminated string (a C-style string).
-   - After writing the string to the standard output, it automatically appends a newline character (`\n`) to the end of the string, so it effectively adds a line break after the output.
-
-   ```c
-   #include <stdio.h>
-
-   int main() {
-       puts("Hello, world!"); // Output: Hello, world!
-       return 0;
-   }
-   ```
-
-2. **fputs**:
-   - `fputs` is used for writing strings to a specified file stream.
-   - It takes two arguments: the string you want to write and the file stream to which you want to write the string.
-   - Unlike `puts`, `fputs` does not automatically add a newline character to the end of the string, so you need to include it in the string if you want a line break.
-
-   ```c
-   #include <stdio.h>
-
-   int main() {
-       FILE *file = fopen("output.txt", "w"); // Open a file for writing
-       if (file != NULL) {
-           fputs("Hello, world!", file); // Write to the file without a newline
-           fclose(file); // Close the file
-       }
-       return 0;
-   }
-   ```
-`fputs` also allows redirection to the [standard error](https://en.wikipedia.org/wiki/Standard_streams#Standard_error_(stderr)):
-```C
-fputs("PRINT03\n", stderr);
-```
-
 # Strongly vs weakly typed languages
 
 C is often described as a "weakly typed" or "loosely typed" language. This means that C allows for more implicit type conversions and flexibility in working with different data types compared to languages that are considered "strongly typed" (e.g. Ada, or Haskell).
@@ -117,8 +34,6 @@ Here, the integer `a` is implicitly converted to a float when added to the float
 However, this flexibility in C can also lead to potential issues and bugs if not used carefully, as implicit type conversions can sometimes produce unexpected results.
 
 ## Conversion or "type casting"
-
-
 
 Example:
 ```C
@@ -144,7 +59,54 @@ Output:
 ```
 PRINT06: Value of mean FLOAT CAST: 7.333333
 ```
-# Return statement
+
+# Code overview
+### Main function
+In C programming, it is necessary to have a `main` function.
+The `main` function serves as the entry point for a C program.
+When you run a C program, the operating system starts executing code from the `main` function.
+Without a `main` function, the program would not have a starting point, and it would not be able to execute.
+
+```C
+#include <stdio.h>
+
+int main() {
+    printf("Hello, world!\n");
+    return 0;
+}
+```
+
+### Preprocessor directive
+`#include` is a preprocessor directive in C.
+It is used to include the contents of a standard or user-defined header file in your C program.
+In this case, `<stdio.h>` is a standard header file that stands for "standard input-output header."
+It provides functions and definitions for input and output operations.
+By including `<stdio.h>`, you gain access to the `printf` function and other I/O related features.
+
+
+### Output display
+`printf` (print format) is a standard C library function used for formatted output.
+It is responsible for displaying text or data on the console or other output devices.
+In this line, `printf` is used to print the string "Hello, world!" followed by a newline character (`\n`) to the standard output (usually the console).  
+Example:
+```C
+printf("PRINT01A: %10d\n", 12345);
+```
+Output:
+```
+PRINT01A:      12345
+```
+Example:
+```C
+float foobar = 0.9375;
+printf("PRINT01B:%.2f\n", foobar);
+```
+Output:
+```
+PRINT01B:0.94
+```
+
+### Return statement
 `return` is a keyword in C used to specify the return value of a function.
 In this case, it's used in the `main` function to indicate that the program has executed without any errors and is returning an exit status of 0.
 In C and many other programming languages, a return value of 0 typically indicates success, while a non-zero value can be used to indicate different error conditions.
@@ -404,4 +366,49 @@ Output:
 PRINT16A: 1002
 PRINT16B: 1000000
 ```
+
+
+# puts and fputs
+Other functions can be used for outputting strings to a file or to the standard output (usually the console).
+
+1. **puts**:
+   - `puts` is primarily used for writing strings to the standard output (stdout).
+   - It takes a single argument, which is a null-terminated string (a C-style string).
+   - After writing the string to the standard output, it automatically appends a newline character (`\n`) to the end of the string, so it effectively adds a line break after the output.
+
+   ```c
+   #include <stdio.h>
+
+   int main() {
+       puts("Hello, world!"); // Output: Hello, world!
+       return 0;
+   }
+   ```
+
+2. **fputs**:
+   - `fputs` is used for writing strings to a specified file stream.
+   - It takes two arguments: the string you want to write and the file stream to which you want to write the string.
+   - Unlike `puts`, `fputs` does not automatically add a newline character to the end of the string, so you need to include it in the string if you want a line break.
+
+   ```c
+   #include <stdio.h>
+
+   int main() {
+       FILE *file = fopen("output.txt", "w"); // Open a file for writing
+       if (file != NULL) {
+           fputs("Hello, world!", file); // Write to the file without a newline
+           fclose(file); // Close the file
+       }
+       return 0;
+   }
+   ```
+`fputs` also allows redirection to the [standard error](https://en.wikipedia.org/wiki/Standard_streams#Standard_error_(stderr)):
+```C
+fputs("PRINT03\n", stderr);
+```
+
+
+
+
+
 

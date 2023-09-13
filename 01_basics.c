@@ -187,7 +187,7 @@ int main(){
 	Enemy* struct_pointer = &boss1;
 	printf("PRINT21: %d\n", boss1.strength);
 	printf("PRINT22: %d\n", (&boss1)->strength);
-	//printf("PRINT22: %d\n", struct_pointer->strength);
+	printf("PRINT23: %d\n", struct_pointer->strength);
 
 
 	/* There is no native hash tables in C (Python dictionaries, Java maps, etc.)

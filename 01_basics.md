@@ -15,7 +15,7 @@ Some of the fundamental data types in C are:
 6. **void**: Represents an empty data type. It is commonly used as the return type for functions that do not return any value. It is also used with pointers to indicate that the pointer does not have a specific data type associated with it.
 
 
-## Strongly vs weakly typed languages
+## Strongly 🆚 weakly typed languages
 
 C is often described as a "weakly typed" or "loosely typed" language. This means that C allows for more implicit type conversions and flexibility in working with different data types compared to languages that are considered "strongly typed" (e.g. Ada, or Haskell).
 

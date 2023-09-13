@@ -90,6 +90,44 @@ Output:
 PRINT01B:0.94
 ```
 
+## puts and fputs
+Other functions can be used for outputting strings to a file or to the standard output (usually the console).
+
+1. **puts**:
+   - `puts` is primarily used for writing strings to the standard output (stdout).
+   - It takes a single argument, which is a null-terminated string (a C-style string).
+   - After writing the string to the standard output, it automatically appends a newline character (`\n`) to the end of the string, so it effectively adds a line break after the output.
+
+   ```c
+   #include <stdio.h>
+
+   int main() {
+       puts("Hello, world!"); // Output: Hello, world!
+       return 0;
+   }
+   ```
+
+2. **fputs**:
+   - `fputs` is used for writing strings to a specified file stream.
+   - It takes two arguments: the string you want to write and the file stream to which you want to write the string.
+   - Unlike `puts`, `fputs` does not automatically add a newline character to the end of the string, so you need to include it in the string if you want a line break.
+
+   ```c
+   #include <stdio.h>
+
+   int main() {
+       FILE *file = fopen("output.txt", "w"); // Open a file for writing
+       if (file != NULL) {
+           fputs("Hello, world!", file); // Write to the file without a newline
+           fclose(file); // Close the file
+       }
+       return 0;
+   }
+   ```
+`fputs` also allows redirection to the standard error:
+```C
+fputs("PRINT03\n", stderr);
+```
 
 
 # Return statement

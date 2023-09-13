@@ -410,6 +410,8 @@ A structure is a composite data type that allows to group together variables of 
 
    ```c
    student1.age = 21;
+   ```
+   ```c
    printf("Name: %s, Age: %d, GPA: %.2f\n", student1.name, student1.age, student1.gpa);
    ```
 

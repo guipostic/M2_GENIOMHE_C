@@ -375,7 +375,20 @@ Output:
    PRINT15: 1001
    ```
 
-### Defining a function pointer
+### Function pointer
+A function pointer can be defined by specifying its return type, parameter types, and the pointer variable's name. The basic syntax for defining a function pointer is:
+
+```c
+return_type (*pointer_name)(parameter_types);
+```
+
+Here's what each part of this syntax represents:
+
+- `return_type`: This is the return type of the function that the pointer can point to.
+- `(*pointer_name)`: This is the pointer variable's name enclosed in parentheses. The asterisk `*` indicates that it's a pointer.
+- `(parameter_types)`: These are the parameter types of the function that the pointer can point to.
+
+
 
 Example:
 

@@ -571,6 +571,9 @@ warning: initialization from incompatible pointer type
 TEST &arr: 0x7ffeb22f150c
 ```
 Try also without the `&`...  
+```
+TEST arr: 0x7ffeb22f150c
+```
 Unlike `arr` and `&arr[0]`, `&arr` is not an `int` pointer (type: `int*`) (hence the warning): it is a "length-3-array pointer" (type: `int(*)[3]`)
 
 

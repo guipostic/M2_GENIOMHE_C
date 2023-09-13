@@ -166,14 +166,14 @@ In C and many other programming languages, a return value of 0 typically indicat
 # Arrays
 Arrays are an essential data structure in the C programming language. They allow to store multiple values of the same data type in a contiguous block of memory.
 
-## Fixed size (static memory allocation)
+### Fixed size (static memory allocation)
 The memory for the array is allocated at compile-time, and its size is determined when the array is declared. Once allocated, the size of the array remains constant throughout the program's execution.
 
-## Same data type
+### Same data type
 All elements in a C array must be of the same data type. You cannot mix different data types within a single array.
 
 
-## Declaration and Initialization
+### Declaration and Initialization
 Arrays can be declared and initialized in various ways:
    ```c
    int numbers[5]; // Declaration of an integer array of size 5
@@ -181,7 +181,7 @@ Arrays can be declared and initialized in various ways:
    ```
 
 
-## Bounds Checking
+### Bounds Checking
 C does not perform bounds checking by default, which means you can access elements outside the bounds of an array. This can lead to [undefined behavior](https://en.wikipedia.org/wiki/Undefined_behavior) or memory corruption if not done carefully.
 
 ```C
@@ -190,16 +190,27 @@ my_arr1[30] = 5; // Undefined Behavior (= nothing to interpret)
 ```
 
 
-## Sizeof Operator
+### Sizeof Operator
 You can use the `sizeof` operator to determine the size (in bytes) of an array or its elements. For example:
    ```c
    int size = sizeof(numbers); // Size of the 'numbers' array in bytes
    ```
 
-## Multidimensional Arrays
+### Multidimensional Arrays
 C supports multidimensional arrays, which are essentially arrays of arrays. Common examples include 2D arrays and matrices.
 
-   ```c
-   int matrix[3][3]; // Declaration of a 2D array (3x3 matrix)
-   ```
+Different ways to initialize a two-dimensional array:
+```
+int c[2][3] = {{1, 3, 0}, {-1, 5, 9}};
+int c[][3] = {{1, 3, 0}, {-1, 5, 9}};
+int c[2][3] = {1, 3, 0, -1, 5, 9};
+```
+
+Initialization of a 3D array:
+```C
+int test[2][3][4] = {
+{{3, 4, 2, 3}, {0, -3, 9, 11}, {23, 12, 23, 2}},
+{{13, 4, 56, 3}, {5, 9, 3, 5}, {3, 1, 4, 9}}
+};
+````
 

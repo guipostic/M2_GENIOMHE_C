@@ -207,7 +207,7 @@ int test[2][3][4] = {
 
    ```c
    int numbers[] = {1, 2, 3, 4, 5};
-   unsigned int length = sizeof(numbers) / sizeof(numbers[0]); // site_t or (unsigned) int; %ld and %d, respectively
+   unsigned int length = sizeof(numbers) / sizeof(numbers[0]); // ⚠️ site_t or (unsigned) int; %ld and %d, respectively
 
    for (int i = 0; i < length; i++) {
        printf("%d ", numbers[i]);

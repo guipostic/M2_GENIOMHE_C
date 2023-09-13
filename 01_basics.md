@@ -394,14 +394,20 @@ int foo_function( int(*funcPtr)(int), int myvalue ){
 
 File `01_basics.c`:
 ```c
-int(*functionPointer)(int);
-functionPointer = &andOne; // Note: NULL vs 0
+#include "foo_test.h"
 
-int result1 = (*functionPointer)(test3);
-printf("PRINT16A: %d\n", result1);
-int abc = 999999;
-foo_function(&andOne, abc); // function from a header file: no prototype needed
-double test_math = sqrt(9); // #include <math.h> is in the header file
+int main(){
+    int(*functionPointer)(int);
+    functionPointer = &andOne; // Note: NULL vs 0
+
+    int result1 = (*functionPointer)(test3);
+    printf("PRINT16A: %d\n", result1);
+    int abc = 999999;
+    foo_function(&andOne, abc); // function from a header file: no prototype needed
+    double test_math = sqrt(9); // #include <math.h> is in the header file
+
+    return 0;
+}
 ```
 
 Output:

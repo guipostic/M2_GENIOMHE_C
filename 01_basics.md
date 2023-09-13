@@ -445,8 +445,49 @@ A structure is a composite data type that allows to group together variables of 
    Book myBook;
    ```
 
+#### Alternative syntax for aliases
+```c
+typedef struct level Level;
+struct level{
+        int length;
+        char name[100];
+} Level_default = {23, "missing_name"}; // Define default value
+```
+
+#### Default value
+```c
+Level level1 = Level_default;
+```
+
+### Pointers to structures
+Example:
+```c
+typedef struct enemy Enemy; // Alias to type "Enemy" instead of "struct enemy"
+struct enemy{
+        /* Structure "members": */
+        char name[100];
+        int life;
+        int strength;
+        /* Structures are data types so no values */
+}; // XXX
 
 
+int main() {
+        Enemy boss1; // Instantiation
+        boss1.strength = 9000;
+        Enemy* struct_pointer = &boss1;
+        printf("PRINT21: %d\n", boss1.strength);
+        printf("PRINT22: %d\n", (&boss1)->strength);
+        printf("PRINT23: %d\n", struct_pointer->strength);
+    return 0;
+}
+```
+Output:
+```
+PRINT21: 9000
+PRINT22: 9000
+PRINT23: 9000
+```
 
 
 # puts and fputs

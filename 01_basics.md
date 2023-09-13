@@ -357,6 +357,7 @@ Example:
     
    ```c
    void andOneMutability(int* ptr_inputvalue){
+        //  The concept of mutability determines whether an object's state can be modified after creation.
        (*ptr_inputvalue)++;
    }
 

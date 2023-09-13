@@ -6,7 +6,7 @@ In interpreted languages, the source code is executed directly by an interpreter
 
 Developing programs in C requires the following steps:
 
-1. **Writing Code**: The C program is written in a text editor or integrated development environment (IDE).
+1. **Writing code**: The C program is written in a text editor or integrated development environment (IDE).
 
 2. **Compilation**: The C compiler (such as GCC, Clang, or Microsoft Visual C++) translates the C source code into machine code or an intermediate form, depending on the target platform and compiler options. This process is known as compilation.
 
@@ -154,7 +154,7 @@ The memory for the array is allocated at compile-time, and its size is determine
 All elements in a C array must be of the same data type. You cannot mix different data types within a single array.
 
 
-### Declaration and Initialization
+### Declaration and initialization
 Arrays can be declared and initialized in various ways:
    ```c
    int numbers[5]; // Declaration of an integer array of size 5
@@ -162,7 +162,7 @@ Arrays can be declared and initialized in various ways:
    ```
 
 
-### Bounds Checking
+### Bounds checking
 C does not perform bounds checking by default, which means you can access elements outside the bounds of an array. This can lead to [undefined behavior](https://en.wikipedia.org/wiki/Undefined_behavior) or memory corruption if not done carefully.
 
 ```C
@@ -171,13 +171,13 @@ my_arr1[30] = 5; // Undefined Behavior (= nothing to interpret)
 ```
 
 
-### Sizeof Operator
+### Sizeof operator
 You can use the `sizeof` operator to determine the size (in bytes) of an array or its elements. For example:
    ```c
    int size = sizeof(numbers); // Size of the 'numbers' array in bytes
    ```
 
-### Multidimensional Arrays
+### Multidimensional arrays
 C supports multidimensional arrays, which are essentially arrays of arrays. Common examples include 2D arrays and matrices.
 
 Different ways to initialize a two-dimensional array:

@@ -21,9 +21,28 @@ It provides functions and definitions for input and output operations.
 By including `<stdio.h>`, you gain access to the `printf` function and other I/O related features.
 
 # Output display
-`printf` is a standard C library function used for formatted output.
+`printf` (print format) is a standard C library function used for formatted output.
 It is responsible for displaying text or data on the console or other output devices.
-In this line, `printf` is used to print the string "Hello, world!" followed by a newline character (`\n`) to the standard output (usually the console).
+In this line, `printf` is used to print the string "Hello, world!" followed by a newline character (`\n`) to the standard output (usually the console).  
+Example:
+```C
+printf("PRINT01A: %10d\n", 12345);
+```
+Output:
+```
+PRINT01A:      12345
+```
+Example:
+```C
+float foobar = 0.9375;
+printf("PRINT01B:%.2f\n", foobar);
+```
+Output:
+```
+PRINT01B:0.94
+```
+
+
 
 # Return statement
 `return` is a keyword in C used to specify the return value of a function.

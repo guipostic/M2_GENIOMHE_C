@@ -300,79 +300,69 @@ Below are the key components of functions in C:
 
 
 # Pointers
-Pointers allow you to work memory addresses directly, enabling low-level memory manipulation and advanced data structures.
+Pointers allow to work memory addresses directly, enabling low-level memory manipulation and advanced data structures.
 
-1. **Definition and Declaration**:
+Example:
+```C
+printf("PRINT11: %p ....... %p\n", &test1, &test2);
+```
+Output:
+```
+PRINT11: 0x7ffe48f19fc8 ....... 0x7ffe48f19fcc
+```
+
+1. **Definition, declaration and initialization**:
    - A pointer is a variable that stores the memory address of another variable.
    - Pointers are declared using an asterisk (*) symbol followed by the data type they point to.
-
-   ```c
-   int *ptr; // Declaration of an integer pointer
-   ```
-
-2. **Initialization**:
    - Pointers must be initialized with the address of a valid variable before they can be used. Uninitialized pointers may lead to undefined behavior.
 
+    Example:
    ```c
-   int x = 42;
-   int *ptr = &x; // Initialize 'ptr' with the address of 'x'
+   int* ptr_test1 = &test1;
+   printf("PRINT12: %p\n", ptr_test1);
+   ```
+   💡 To have behavior defined by the C standard when printing a pointer, you should convert it to `(void*)`
+
+   Output:
+   ```
+   PRINT12: 0x7ffe48f19fc8
    ```
 
-3. **Dereferencing**:
+2. **Dereferencing**:
    - To access the value pointed to by a pointer, you use the dereference operator (`*`).
 
+    Example:
    ```c
-   int value = *ptr; // Access the value pointed to by 'ptr' (i.e., 'x')
+   printf("PRINT13: BEFORE = %d\n", test1);
+   (*ptr_test1)++;
+   printf("PRINT14: AFTER = %d\n", test1);
+   ```
+   🆚 `*ptr_test1++;`: operator precedence rules
+
+   Output:
+   ```
+   PRINT13: BEFORE = 10
+   PRINT14: AFTER = 11
    ```
 
-4. **Pointer Arithmetic**:
-   - Pointers can be manipulated using arithmetic operations like addition and subtraction. This is especially useful for iterating over arrays and working with data structures.
 
-   ```c
-   int numbers[] = {1, 2, 3};
-   int *ptr = numbers; // Point 'ptr' to the start of the array
-
-   int thirdValue = *(ptr + 2); // Access the third element using pointer arithmetic
-   ```
-
-5. **Void Pointers**:
-   - `void` pointers (`void *`) are a special type of pointer that can point to objects of any data type. They are often used for functions that need to work with generic data.
-
-   ```c
-   void *genericPtr;
-   int x = 42;
-   double y = 3.14;
-
-   genericPtr = &x;
-   genericPtr = &y;
-   ```
-
-6. **Pointer to Pointers**:
-   - Pointers can also have pointers to them, creating multiple levels of indirection. These are commonly used in situations like managing dynamic arrays or multidimensional arrays.
-
-   ```c
-   int x = 42;
-   int *ptr = &x;
-   int **ptrToPtr = &ptr; // Pointer to a pointer
-   ```
-
-7. **Dynamic Memory Allocation**:
-   - Pointers are often used with dynamic memory allocation functions like `malloc`, `calloc`, and `realloc` to allocate and manage memory on the heap.
-
-   ```c
-   int *dynamicArray = (int *)malloc(5 * sizeof(int)); // Allocate memory for an integer array
-   ```
-
-8. **Passing Pointers to Functions**:
+3. **Passing Pointers to Functions**:
    - Pointers are frequently used to pass data by reference to functions, allowing functions to modify the original data.
 
+    Example:
    ```c
-   void modifyValue(int *ptr) {
-       *ptr = 100;
+   void andOneMutability(int* ptr_inputvalue){
+       (*ptr_inputvalue)++;
    }
 
    int main() {
-       int x = 42;
-       modifyValue(&x); // Pass 'x' by reference
+       int test3 = 1000;
+       andOneMutability(&test3);
+       printf("PRINT15: %d\n", test3);
    }
    ```
+    Output:
+   ```
+   PRINT15: 1001
+   ```
+    Okjdlkjsdklcj

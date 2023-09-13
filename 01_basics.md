@@ -582,7 +582,7 @@ printf("\nSUMMARY: arr: %p, &arr[0]: %p, &arr: %p\n", arr, &arr[0], &arr);
 SUMMARY: arr: 0x7ffeb22f150c, &arr[0]: 0x7ffeb22f150c, &arr: 0x7ffeb22f150c
 ```
 
-Now, this is the correct way to declare a pointer on the entire array (not only the first value):
+### The correct way to declare a pointer on the entire array
 ```c
 int(* arr_ptr)[] = &arr; // it works also with [3]
 printf("\nDEREFERENCED ARRAY POINTER WITH INDEX: %d\n", (*arr_ptr)[1]); // value at the index i

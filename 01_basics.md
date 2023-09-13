@@ -16,10 +16,10 @@ Some of the fundamental data types in C are:
 
 7. **typedef**: Allows you to create aliases or custom names for existing data types. For example, you can use `typedef` to create a new name for an `int` or `struct` type.
 
-Example:
-```C
-typedef unsigned long int ulint;
-```
+    Example:
+    ```C
+    typedef unsigned long int ulint;
+    ```
 
 ## Strongly 🆚 weakly typed languages
 

@@ -1,3 +1,22 @@
+
+# Compiled programming language
+
+C is a compiled programming language. This means that C source code must be processed by a compiler to generate machine code or intermediate code that can be executed directly by a computer's CPU.
+In interpreted languages, the source code is executed directly by an interpreter, making the code more portable but potentially less efficient.
+
+Developing programs in C requires the following steps:
+
+1. **Writing Code**: The C program is written in a text editor or integrated development environment (IDE).
+
+2. **Compilation**: The C compiler (such as GCC, Clang, or Microsoft Visual C++) translates the C source code into machine code or an intermediate form, depending on the target platform and compiler options. This process is known as compilation.
+
+3. **Linking**: In addition to compiling individual source files, the compiler may also link together various object files and libraries to produce a single executable file. Linking resolves references to functions and symbols used across multiple source files.
+
+4. **Execution**: The resulting executable file can be executed directly by the computer's CPU. It doesn't require an interpreter to execute the code.
+
+C's status as a compiled language offers several advantages, including high performance, direct hardware access, and the ability to create standalone executables that can be run independently on a target system. However, it also means that you need to recompile your code whenever you make changes, and the executable may be platform-dependent, requiring recompilation for different platforms.
+
+
 # Data types
 C provides several basic data types that can be used to define variables and perform operations on data.  
 Some of the fundamental data types in C are:

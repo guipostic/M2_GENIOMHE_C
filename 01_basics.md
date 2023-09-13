@@ -240,4 +240,15 @@ int test[2][3][4] = {
    }
    ```
    
+# Conditional statements
+```C
+bool statement1 = true;
+bool statement2 = false;
+if (statement1 && statement2){
+    printf("PRINT08: Both are true\n");
+}
+        if (statement1 || statement2){
+                printf("PRINT09: One or more is true\n");
+        }
+```
 

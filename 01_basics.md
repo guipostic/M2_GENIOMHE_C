@@ -214,3 +214,30 @@ int test[2][3][4] = {
 };
 ````
 
+## Iteration through a C array
+
+1. **For Loop**: A `for` loop is a commonly used construct for iterating over arrays. You can use a `for` loop to specify the start and end index of the array and step through each element.
+
+   ```c
+   int numbers[] = {1, 2, 3, 4, 5};
+   unsigned int length = sizeof(numbers) / sizeof(numbers[0]); // site_t or (unsigned) int; %ld and %d, respectively
+
+   for (int i = 0; i < length; i++) {
+       printf("%d ", numbers[i]);
+   }
+   ```
+
+2. **While Loop**: You can also use a `while` loop when you need more control over the iteration process. You manually manage the loop counter and exit condition.
+
+   ```c
+   int numbers[] = {1, 2, 3, 4, 5};
+   size_t length = sizeof(numbers) / sizeof(numbers[0]);
+   int i = 0;
+
+   while (i < length) {
+       printf("%d ", numbers[i]);
+       i++;
+   }
+   ```
+   
+

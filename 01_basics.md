@@ -381,6 +381,72 @@ PRINT16B: 1000000
 ```
 
 
+# Structures
+A structure is a composite data type that allows to group together variables of different data types under a single name. Structures enable to create custom data types to represent complex data structures or objects in your programs.
+
+### Declaration
+   - You declare a structure using the `struct` keyword, followed by the structure's name.
+   - Inside the structure, you define the member variables or fields, each with its own data type.
+
+   ```c
+   struct Student {
+       char name[50];
+       int age;
+       float gpa;
+   };
+   ```
+
+### Initialization
+   - You can create instances (variables) of a structure by specifying the structure's name followed by the variable name.
+   - You can also initialize structure variables during declaration.
+
+   ```c
+   struct Student student1; // Declaration of a structure variable
+   struct Student student2 = {"Alice", 20, 3.5}; // Declaration and initialization
+   ```
+
+### Accessing members
+   - You access the members (fields) of a structure variable using the dot (`.`) operator.
+
+   ```c
+   student1.age = 21;
+   printf("Name: %s, Age: %d, GPA: %.2f\n", student1.name, student1.age, student1.gpa);
+   ```
+
+### Nested structures
+   - Structures can contain other structures as members, allowing you to create complex data structures.
+
+   ```c
+   struct Address {
+       char street[50];
+       char city[30];
+       char state[20];
+   };
+
+   struct Person {
+       char name[50];
+       int age;
+       struct Address address;
+   };
+   ```
+
+
+### Typedef
+   - You can use `typedef` to create an alias for a structure, making it easier to declare variables of that type.
+
+   ```c
+   typedef struct {
+       char title[50];
+       int year;
+   } Book;
+
+   Book myBook;
+   ```
+
+
+
+
+
 # puts and fputs
 Other functions can be used for outputting strings to a file or to the standard output (usually the console).
 

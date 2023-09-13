@@ -33,7 +33,7 @@ Here, the integer `a` is implicitly converted to a float when added to the float
 
 However, this flexibility in C can also lead to potential issues and bugs if not used carefully, as implicit type conversions can sometimes produce unexpected results.
 
-## Conversion or "type casting"
+### Conversion or "type casting"
 
 Example:
 ```C

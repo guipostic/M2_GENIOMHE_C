@@ -549,7 +549,7 @@ printf("PRINT arr: %d, %p\n", arr, arr);
 ```
 PRINT arr: -1305537268, 0x7ffeb22f150c
 ```
-The arr variable is actually a pointer on the first value.
+The `arr` variable is actually a pointer on the first value.
 
 ```c
 int* first_val_ptr = &arr[0]; // You can test with &arr[1] and &arr[2]
@@ -574,7 +574,7 @@ Try also without the `&`...
 Unlike `arr` and `&arr[0]`, `&arr` is not an `int` pointer (type: `int*`) (hence the warning): it is a "length-3-array pointer" (type: `int(*)[3]`)
 
 
-Two different types but they have the same value!!
+⚠️ Two different types but they have the same value!
 ```c
 printf("\nSUMMARY: arr: %p, &arr[0]: %p, &arr: %p\n", arr, &arr[0], &arr);
 ```
@@ -602,7 +602,7 @@ printf("ENTIRE ARRAY POINTER?? %p\n", arr_ptr); // NO!! ;-) first value pointer 
 ENTIRE ARRAY POINTER?? 0x7ffeb22f150c
 ```
 
-No equivalent of Python typeof(), but you can test the type this way:
+No equivalent of Python `typeof()`, but you can test the type this way:
 ```c
 int(* tab)[] = *arr_ptr;
 ```

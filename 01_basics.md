@@ -40,7 +40,7 @@ Some of the fundamental data types in C are:
 
 ## Strongly 🆚 weakly typed languages
 
-C is often described as a "weakly typed" or "loosely typed" language. This means that C allows for more implicit type conversions and flexibility in working with different data types compared to languages that are considered "strongly typed" (e.g. Ada, or Haskell).
+C is sometimes described as a "weakly typed" or "loosely typed" language. This means that C allows for more implicit type conversions and flexibility in working with different data types compared to languages that are considered "strongly typed" (e.g. Ada, or Haskell).
 
 In a strongly typed language, strict type checking is enforced, and type conversions typically require explicit casting or conversion functions. C, on the other hand, allows you to perform operations on different types of data more liberally, and it will often perform implicit type conversions when necessary.
 

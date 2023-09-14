@@ -1,5 +1,7 @@
 # M2_GENIOMHE_C
-CM et TD de [programmation C pour le Master 2 GENIOMHE](https://github.com/guipostic/M2_GENIOMHE_C)
+CM et TD de programmation C pour le Master 2 GENIOMHE
+
+👉 [Access to the course](https://github.com/guipostic/M2_GENIOMHE_C/blob/main/doc/01_basics.md)
 
 ## Summary
 This course will teach you the basics of the C programming language.  

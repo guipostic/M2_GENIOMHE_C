@@ -14,7 +14,7 @@ Developing programs in C requires the following steps:
 
 4. **Execution**: The resulting executable file can be executed directly by the computer's CPU. It doesn't require an interpreter to execute the code.
 
-C's status as a compiled language offers several advantages, including high performance, direct hardware access, and the ability to create standalone executables that can be run independently on a target system. However, it also means that you need to recompile your code whenever you make changes, and the executable may be platform-dependent, requiring recompilation for different platforms.
+C's status as a compiled language offers several advantages, including high performance, direct hardware access, and the ability to create standalone executables that can be run independently on a target system. However, it also means that the code must be recompiled whenever changes are made, and the executable may be platform-dependent, requiring recompilation for different platforms.
 
 
 # Data types
@@ -31,7 +31,7 @@ Some of the fundamental data types in C are:
 
 5. **bool**: Represents boolean values, which can have one of two possible values: `0` for false or `1` for true. This data type is introduced in C99 and is often used in conditional expressions.
 
-6. **typedef**: Allows you to create aliases or custom names for existing data types. For example, you can use `typedef` to create a new name for an `int` or `struct` type.
+6. **typedef**: Allows to create aliases or custom names for existing data types. For example, `typedef` can be used to create a new name for an `int` or `struct` type.
 
     Example:
     ```C
@@ -42,7 +42,7 @@ Some of the fundamental data types in C are:
 
 C is sometimes described as a "weakly typed" or "loosely typed" language. This means that C allows for more implicit type conversions and flexibility in working with different data types compared to languages that are considered "strongly typed" (e.g. Ada, or Haskell).
 
-In a strongly typed language, strict type checking is enforced, and type conversions typically require explicit casting or conversion functions. C, on the other hand, allows you to perform operations on different types of data more liberally, and it will often perform implicit type conversions when necessary.
+In a strongly typed language, strict type checking is enforced, and type conversions typically require explicit casting or conversion functions. C, on the other hand, allows to perform operations on different types of data more liberally, and it will often perform implicit type conversions when necessary.
 
 Example:
 
@@ -52,7 +52,7 @@ float b = 3.14;
 float result = a + b; // Implicit conversion of 'a' to float
 ```
 
-Here, the integer `a` is implicitly converted to a float when added to the float `b`. Many strongly typed languages would require you to explicitly cast `a` to a float in this case.
+Here, the integer `a` is implicitly converted to a float when added to the float `b`. Many strongly typed languages would require to explicitly cast `a` to a float in this case.
 
 However, this flexibility in C can also lead to potential issues and bugs if not used carefully, as implicit type conversions can sometimes produce unexpected results.
 
@@ -87,7 +87,7 @@ PRINT06: Value of mean FLOAT CAST: 7.333333
 ### Main function
 In C programming, it is necessary to have a `main` function.
 The `main` function serves as the entry point for a C program.
-When you run a C program, the operating system starts executing code from the `main` function.
+When a C program is run, the operating system starts executing code from the `main` function.
 Without a `main` function, the program would not have a starting point, and it would not be able to execute.
 
 ```C
@@ -106,7 +106,7 @@ In this case, `<stdio.h>` is a standard header file that stands for "standard in
 It provides functions and definitions for input and output operations.
 By including `<stdio.h>`, you gain access to the `printf` function and other I/O related features.  
 
-The `#define` preprocessor directive is used to create macros or symbolic constants.
+`#define` is preprocessor directive used to create macros or symbolic constants.
 It allows you to define a name (the macro name) that represents a value, an expression, or a block of code.
 When the preprocessor encounters the macro name in your code, it replaces it with the defined value or code before the actual compilation of your program begins.
 

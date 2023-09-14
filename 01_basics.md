@@ -101,7 +101,7 @@ int main() {
 
 ### Preprocessor directives
 `#include` is a preprocessor directive in C.
-It is used to include the contents of a standard or user-defined header file in your C program.
+It is used to include the contents of a standard or user-defined [header file](https://en.wikipedia.org/wiki/Include_directive#Header_files) in your C program.
 In this case, `<stdio.h>` is a standard header file that stands for "standard input-output header."
 It provides functions and definitions for input and output operations.
 By including `<stdio.h>`, you gain access to the `printf` function and other I/O related features.  

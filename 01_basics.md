@@ -29,7 +29,7 @@ Some of the fundamental data types in C are:
 
 4. **char**: Represents individual characters. It's typically 1 byte in size.
 
-5. **_Bool**: Represents boolean values, which can have one of two possible values: `0` for false or `1` for true. This data type is introduced in C99 and is often used in conditional expressions.
+5. **bool**: Represents boolean values, which can have one of two possible values: `0` for false or `1` for true. This data type is introduced in C99 and is often used in conditional expressions.
 
 6. **typedef**: Allows you to create aliases or custom names for existing data types. For example, you can use `typedef` to create a new name for an `int` or `struct` type.
 

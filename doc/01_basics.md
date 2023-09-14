@@ -338,7 +338,7 @@ Example:
    (*ptr_test1)++;
    printf("PRINT14: AFTER = %d\n", test1);
    ```
-   🆚 `*ptr_test1++;`: operator precedence rules
+   ⚠️ `*ptr_test1++;`: operator precedence rules
 
 Output:
 

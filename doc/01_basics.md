@@ -2,7 +2,7 @@
 # Compiled programming language
 
 C is a compiled programming language. This means that C source code must be processed by a compiler to generate machine code or intermediate code that can be executed directly by a computer's CPU.
-In interpreted languages, the source code is executed directly by an interpreter, making the code more portable but potentially less efficient.
+In interpreted languages (e.g. Python, JavaScript), the source code is executed directly by an interpreter, making the code more portable but potentially less efficient.
 
 Developing programs in C requires the following steps:
 

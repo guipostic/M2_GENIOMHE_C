@@ -2,7 +2,7 @@
 # Compiled programming language
 
 C is a compiled programming language. This means that C source code must be processed by a compiler to generate machine code or intermediate code that can be executed directly by a computer's CPU.
-In interpreted languages, the source code is executed directly by an interpreter, making the code more portable but potentially less efficient.
+In interpreted languages (e.g. Python, JavaScript), the source code is executed directly by an interpreter, making the code more portable but potentially less efficient.
 
 Developing programs in C requires the following steps:
 
@@ -338,7 +338,7 @@ Example:
    (*ptr_test1)++;
    printf("PRINT14: AFTER = %d\n", test1);
    ```
-   🆚 `*ptr_test1++;`: operator precedence rules
+   ⚠️ `*ptr_test1++;`: operator precedence rules
 
 Output:
 
@@ -505,6 +505,8 @@ Level level1 = Level_default;
 ```
 
 ### Pointers to structures
+   - To access the members from a structure pointer, use the arrow (`->`) operator.
+
 Example:
 ```c
 typedef struct enemy Enemy; // Alias to type "Enemy" instead of "struct enemy"
@@ -629,7 +631,7 @@ ARRAY AFTER: 999
 ```
 In Python, the list would have been copied within the function block, and only the copy would have been modified.
 
-To copy array (including string):
+To copy an array (including string):
 ```c
 memcpy(array2, array1, sizeof(array2)) // #include <string.h>
 ```

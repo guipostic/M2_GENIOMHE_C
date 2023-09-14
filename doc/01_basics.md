@@ -631,7 +631,7 @@ ARRAY AFTER: 999
 ```
 In Python, the list would have been copied within the function block, and only the copy would have been modified.
 
-To copy array (including string):
+To copy an array (including string):
 ```c
 memcpy(array2, array1, sizeof(array2)) // #include <string.h>
 ```

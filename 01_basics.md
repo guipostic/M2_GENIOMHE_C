@@ -147,11 +147,9 @@ In C and many other programming languages, a return value of 0 typically indicat
 # Arrays
 Arrays are an essential data structure in the C programming language. They allow to store multiple values of the same data type in a contiguous block of memory.
 
-* **Fixed size (static memory allocation)**:  
-The memory for the array is allocated at compile-time, and its size is determined when the array is declared. Once allocated, the size of the array remains constant throughout the program's execution.
+* **Fixed size (static memory allocation)**: The memory for the array is allocated at compile-time, and its size is determined when the array is declared. Once allocated, the size of the array remains constant throughout the program's execution.
 
-* **Same data type**:  
-All elements in a C array must be of the same data type. Different data types cannot be mixed within a single array.
+* **Same data type**: All elements in a C array must be of the same data type. Different data types cannot be mixed within a single array.
 
 
 ### Declaration and initialization

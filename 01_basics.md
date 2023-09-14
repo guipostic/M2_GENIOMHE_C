@@ -101,14 +101,14 @@ int main() {
 
 ### Preprocessor directives
 `#include` is a preprocessor directive in C.
-It is used to include the contents of a standard or user-defined [header file](https://en.wikipedia.org/wiki/Include_directive#Header_files) in your C program.
+It is used to include the contents of a standard or user-defined [header file](https://en.wikipedia.org/wiki/Include_directive#Header_files) in the C program.
 In this case, `<stdio.h>` is a standard header file that stands for "standard input-output header."
 It provides functions and definitions for input and output operations.
 By including `<stdio.h>`, you gain access to the `printf` function and other I/O related features.  
 
 `#define` is preprocessor directive used to create macros or symbolic constants.
-It allows you to define a name (the macro name) that represents a value, an expression, or a block of code.
-When the preprocessor encounters the macro name in your code, it replaces it with the defined value or code before the actual compilation of your program begins.
+It allows to define a name (the macro name) that represents a value, an expression, or a block of code.
+When the preprocessor encounters the macro name in the code, it replaces it with the defined value or code before the actual compilation of the program begins.
 
 Example:
 ```C
@@ -151,7 +151,7 @@ Arrays are an essential data structure in the C programming language. They allow
 The memory for the array is allocated at compile-time, and its size is determined when the array is declared. Once allocated, the size of the array remains constant throughout the program's execution.
 
 * **Same data type**:  
-All elements in a C array must be of the same data type. You cannot mix different data types within a single array.
+All elements in a C array must be of the same data type. Different data types cannot be mixed within a single array.
 
 
 ### Declaration and initialization
@@ -172,7 +172,7 @@ my_arr1[30] = 5; // Undefined Behavior (= nothing to interpret)
 
 
 ### Sizeof operator
-You can use the `sizeof` operator to determine the size (in bytes) of an array or its elements. For example:
+The `sizeof` operator can be used to determine the size (in bytes) of an array or its elements. For example:
    ```c
    int size = sizeof(numbers); // Size of the 'numbers' array in bytes
    ```
@@ -197,7 +197,7 @@ int test[2][3][4] = {
 
 ### Iteration through an array
 
-1. **For Loop**: A `for` loop is a commonly used construct for iterating over arrays. You can use a `for` loop to specify the start and end index of the array and step through each element.
+1. **For Loop**: A `for` loop is a commonly used construct for iterating over arrays. A `for` loop can be used to specify the start and end index of the array and step through each element.
 
    ```c
    int numbers[] = {1, 2, 3, 4, 5};
@@ -208,7 +208,7 @@ int test[2][3][4] = {
    }
    ```
 
-2. **While Loop**: You can also use a `while` loop when you need more control over the iteration process. You manually manage the loop counter and exit condition.
+2. **While Loop**: A `while` loop can also be used when for more control over the iteration process. The loop counter and exit condition must be managed manually.
 
    ```c
    int numbers[] = {1, 2, 3, 4, 5};
@@ -285,7 +285,7 @@ Output:
 
 ### Function prototype
    - A function prototype is a declaration of a function that provides information about its name, return type, and parameters. It serves as a blueprint for the function.
-   - The function prototype typically appears before the `main` function in your C program, or you can place it in a header file (.h) and include that file in your source code.
+   - The function prototype typically appears before the `main` function in the C program, or you can place it in a header file (.h) and include that file in the source code.
 
    ```c
    // Function prototype
@@ -331,7 +331,7 @@ Output:
    ```
 
 ### Dereferencing
-   - To access the value pointed to by a pointer, you use the dereference operator (`*`).
+   - To access the value pointed to by a pointer, use the dereference operator (`*`).
 
 Example:
 
@@ -429,11 +429,11 @@ PRINT16B: 1000000
 
 
 # Structures
-A structure is a composite data type that allows to group together variables of different data types under a single name. Structures enable to create custom data types to represent complex data structures or objects in your programs.
+A structure is a composite data type that allows to group together variables of different data types under a single name. Structures enable to create custom data types to represent complex data structures or objects in the programs.
 
 ### Declaration
-   - You declare a structure using the `struct` keyword, followed by the structure's name.
-   - Inside the structure, you define the member variables or fields, each with its own data type.
+   - A structure is declared by using the `struct` keyword, followed by the structure's name.
+   - Inside the structure, the member variables or fields are defined, each with its own data type.
 
    ```c
    struct Student {
@@ -453,7 +453,7 @@ A structure is a composite data type that allows to group together variables of 
    ```
 
 ### Accessing members
-   - You access the members (fields) of a structure variable using the dot (`.`) operator.
+   - To access the members (fields) of a structure variable, use the dot (`.`) operator.
 
    ```c
    student1.age = 21;
@@ -463,7 +463,7 @@ A structure is a composite data type that allows to group together variables of 
    ```
 
 ### Nested structures
-   - Structures can contain other structures as members, allowing you to create complex data structures.
+   - Structures can contain other structures as members, allowing to create complex data structures.
 
    ```c
    struct Address {

@@ -505,6 +505,8 @@ Level level1 = Level_default;
 ```
 
 ### Pointers to structures
+   - To access the members from a structure pointer, use the arrow (`->`) operator.
+
 Example:
 ```c
 typedef struct enemy Enemy; // Alias to type "Enemy" instead of "struct enemy"

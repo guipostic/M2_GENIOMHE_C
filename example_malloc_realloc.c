@@ -3,7 +3,7 @@
 
 int main(){
 	/* malloc: dynamic memory allocation (note: the memory blocks allocated are contiguous) */
-	int* array = malloc(3 * sizeof(int)); // XXX No type casting;
+	int* array = malloc(3 * sizeof(int)); // No type casting;
 	array[2] = 5;
 	printf("FIRST PRINT: %d\n", array[2]);
 

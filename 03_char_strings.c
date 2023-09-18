@@ -5,12 +5,18 @@
 int main(){
 	char myOneChar = 'A'; // Single character + single quotes
 
-	char* myCharPointer = "ABCDE"; // One or more characters + double quotes
+	char* myCharPointer = "ABCDE"; // One or more characters + double quotes (https://en.wikipedia.org/wiki/String_literal)
 	char myCharArray[] = "VWXYZ"; 
 
 	/* These two are different types, but the compiler automatically converts the array into a pointer */
 	printf("CHAR POINTER: %s\n", myCharPointer);
+	printf("CHAR POINTER DEREFERENCED: %c\n", *myCharPointer);
 	printf("CHAR ARRAY: %s\n", myCharArray);
+
+	/* Pointer arithmetic */
+	char* secondCharPtr = myCharPointer + 1;
+	printf("CHAR POINTER +1: %s\n", secondCharPtr);
+	printf("CHAR POINTER +1 DEREFERENCED: %c\n", *secondCharPtr);
 
 	/* Modify a character */
 	myCharArray[2] = '-';

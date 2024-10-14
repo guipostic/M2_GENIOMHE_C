@@ -17,8 +17,8 @@ int main(){
 	second_node->data = 1234;
 	second_node->next = third_node;
 
-	//Node some_node;
-	//Node* some_node_ptr = &some_node;
-	//some_node.data = 78578678;
+	Node some_node;
+	Node* some_node_ptr = &some_node;
+	some_node.data = 78578678;
 	//some_node.next = (some_address)
 }

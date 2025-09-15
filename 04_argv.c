@@ -7,7 +7,7 @@ int main (int argc, char *argv[]) {
 	/* First argument is executable name only */
 	printf("\nexe name=%s", argv[0]);
 
-	fo (i=1; i< argc; i++) {
+	for (i=0; i< argc; i++) {
 		printf("\narg%d=%s", i, argv[i]);
 	}
 

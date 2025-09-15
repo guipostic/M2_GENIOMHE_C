@@ -5,6 +5,7 @@ SRC2    = ./02_array_pointers.c
 EXE1    = basics
 EXE2    = array_pointers
 
+# test
 all: $(EXE1) $(EXE2)
 	
 $(EXE1): $(SRC1)

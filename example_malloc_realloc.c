@@ -16,7 +16,8 @@ int main(){
 	/* realloc: dynamic vs static memory allocation */
 	int array2[] = {11, 12, 13};
 	array2[30] = 10;
-	printf("BEFORE2: %d\n", array2[29]);
+	printf("ALTBEFORE2: %d\n", array2[29]);
+	printf("BEFORE2: %d\n", array2[30]);
 
 	array = realloc(array, 4000000 * sizeof(int));
 	//array2 = realloc(array2, 4000000 * sizeof(int));

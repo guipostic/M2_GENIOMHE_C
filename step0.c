@@ -12,7 +12,7 @@ int main(){
 	Node* first_node = (Node*) malloc(1 * sizeof(Node));
 	Node* second_node = (Node*) malloc(1 * sizeof(Node));
 	Node* third_node = (Node*) malloc(1 * sizeof(Node));
-	first_node.data = 12;
+	first_node->data = 12;
 	first_node->next = second_node;
 	second_node->data = 1234;
 	second_node->next = third_node;

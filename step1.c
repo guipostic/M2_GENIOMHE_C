@@ -51,7 +51,9 @@ int main(){
 	printf("%d, ", first_node->next->next->data);
 	// NOTE: dereferencing freed pointer = undefined behavior;
 	// To avoid that, always set pointer to NULL after free()
+	/*
 	printf("%d, ", first_node->next->next->next->data);
 	printf("\n");
+	*/
 
 }

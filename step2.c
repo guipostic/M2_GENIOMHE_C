@@ -24,6 +24,9 @@ void erase_list(Node* head){
 		current_node = current_node->next;
 		free(previous_node);
 	}
+	previous_node = current_node;
+	current_node = current_node->next;
+	free(previous_node);
 }
 
 int main(){
@@ -39,5 +42,5 @@ int main(){
 	
 	print_list(first_node);
 	erase_list(first_node);
-	print_list(first_node);
+	//print_list(first_node);
 }
